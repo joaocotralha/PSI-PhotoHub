@@ -1,0 +1,27 @@
+Executar Node (BackEnd) Port: 3080
+- Diretoria psi/backend/
+- DEBUG=backend:* npm run devstart
+
+Executar Angular (FrontEnd) Port: 3030
+- Diretoria psi/psi-app/
+- ng serve --port 3030 --host 0.0.0.0 --disableHostCheck true
+
+Executar a DB
+- mongo --username psi030 --password --authenticationDatabase psi030 appserver.alunos.di.fc.ul.pt/psi030
+
+
+Comandos:
+Inicializar o frontend 
+./node_modules/.bin/pm2 start run.sh --name frontend
+
+Parar o backend 
+./node_modules/.bin/pm2 stop backend
+
+Inicializar o backend 
+./node_modules/.bin/pm2 start run.sh --name backend
+
+Parar o backend 
+./node_modules/.bin/pm2 stop backend
+
+Ver o conteudo
+./node_modules/.bin/pm2 ls
